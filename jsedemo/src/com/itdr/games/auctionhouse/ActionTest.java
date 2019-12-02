@@ -1,5 +1,5 @@
 package com.itdr.games.auctionhouse;
-import com.itdr.diwuzhou.auctionhouse.utils.AdvertisementUtil;
+import com.itdr.fifth_week.auctionhouse.utils.AdvertisementUtil;
 import com.itdr.games.auctionhouse.controller.LotsController;
 import com.itdr.games.auctionhouse.controller.PayController;
 import com.itdr.games.auctionhouse.controller.ShopController;
@@ -194,9 +194,10 @@ public class ActionTest {
                               break;//case3退出
                           //上架商品
                           case 4:
-                              System.out.println("1.上架商品\t 2.返回主菜单");
                               System.out.println("================\t 1. 上架商品\t    =================" +"\n"+
                                       "================\t 2.返回主菜单\t=================");
+                              System.out.println("友情提示：只有金额大于500元才可上架商品！请注意你的余额");
+                              System.out.println("=========================================================");
                               int sj =sc.nextInt();
                               if(sj == 1){
                                   System.out.println("================\t请输入商品名称\t=================");

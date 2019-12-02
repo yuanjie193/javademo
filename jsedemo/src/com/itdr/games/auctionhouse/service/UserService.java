@@ -73,7 +73,7 @@ public class UserService {
     public String addGoods(String uname,String goodsname,int price,String description){
             int a = userDao.addGoods(uname,goodsname,price,description);
             if(a == -1){
-                return "商品上架失败";
+                return "目前你没有权限上架商品！";
             }
             return "商品已成功上架！";
     }

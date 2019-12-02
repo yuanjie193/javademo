@@ -79,17 +79,20 @@ public class UserDao {
     //用户将商品上架
     public int addGoods(String uname,String goodsname,int price,String description){
         for (int j = 0; j < u.length; j++) {
-            if(u[j].getUserName().equals(uname)){
-                for (int i = 0; i < lots.length; i++) {
-                    if(lots[i]== null){
-                        Lots ls =new Lots();
-                        ls.setGoodsID(i+1);
-                        ls.setGoodsDescription(description);
-                        ls.setGoodsPrice(price);
-                        ls.setGoodsName(goodsname);
-                        lots[i]=ls;
-                        return 1;
+            if(u[j]!=null) {
+                if (u[j].getUserName().equals(uname) &&u[j].getMoney()>500) {
+                    for (int i = 0; i < lots.length; i++) {
+                        if (lots[i] == null) {
+                            Lots ls = new Lots();
+                            ls.setGoodsID(i + 1);
+                            ls.setGoodsDescription(description);
+                            ls.setGoodsPrice(price);
+                            ls.setGoodsName(goodsname);
+                            lots[i] = ls;
+                            return 1;
+                        }
                     }
+
                 }
             }
         }

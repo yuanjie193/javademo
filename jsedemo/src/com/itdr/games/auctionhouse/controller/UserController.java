@@ -1,6 +1,5 @@
 package com.itdr.games.auctionhouse.controller;
 
-import com.itdr.diwuzhou.auctionhouse.auction.Users;
 import com.itdr.games.auctionhouse.service.UserService;
 
 public class UserController {
