@@ -58,7 +58,7 @@ public class UserService {
            }else{
                users.setLevel("小白");
            }
-            return ("======"+name+":当前身份级别是"+users.getLevel()+"\t"+"====目前的金币是:"+users.getMoney()+"======"
+            return ("======"+name+"：当前身份级别是："+users.getLevel()+"\t"+"======目前的金币是:"+users.getMoney()+"======"
             );
     }
      //充值金币

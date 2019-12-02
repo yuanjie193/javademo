@@ -5,8 +5,9 @@ import com.itdr.games.auctionhouse.pojo.ShoppingCars;
 import static com.itdr.games.auctionhouse.dao.LotsDao.lots;
 
 public class ShopDao {
+    //初始化购物车数组
     protected static  ShoppingCars[] sc;
-    static LotsDao ld =new LotsDao();
+    /*static LotsDao ld =new LotsDao();*/
     static {
         sc = new ShoppingCars[10];
     }
@@ -46,5 +47,17 @@ public class ShopDao {
             }
         }
 
+    }
+    //清理购物车产品
+    public int reduce(String uName,String goodsName){
+        for (int i = 0; i < sc.length; i++) {
+            if(sc[i]!=null){
+                if(sc[i].getUserName().equals(uName) && sc[i].getGoodsName().equals(goodsName)){
+                    sc[i]=null;
+                    return 1;
+                }
+            }
+        }
+        return -1;
     }
 }

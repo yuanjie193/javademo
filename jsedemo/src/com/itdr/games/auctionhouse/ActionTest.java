@@ -64,7 +64,9 @@ public class ActionTest {
                               while(x==1){
                                   System.out.println("请输入充值金额，一次最多一万");
                                   int cz =sc.nextInt();
+                                  //充值
                                   uc.recharge(cz,username2,psd2);
+                                  //展示用户信息
                                   uc.show(username2,psd2);
                                   System.out.println("是否再次进行充值：充值请按：1，返回请按：0");
                                   x =sc.nextInt();
@@ -138,8 +140,9 @@ public class ActionTest {
                               int zj= pc.settlement(username2);
                               if(zj>0){
                                   System.out.println("==========\t你的商品总价为"+ zj+"\t==========");
-                                  System.out.println("是否继续购买商品：购买商品请按：1，返回上一级请按：0");
+                                  System.out.println("是否继续购买商品：购买商品请按：1，\t删除商品请按：2，\t返回上一级请按：0");
                                   int gm =sc.nextInt();
+                               //购买商品
                               if(gm==1){
                                   int pd = pc.judge(username2,zj);
                                   if(pd==1){
@@ -157,19 +160,30 @@ public class ActionTest {
                                               break;
                                           }
 
+                                             }else {
+                                             System.out.println("你的余额不足，是否进行充值：充值请按：1，返回请按：0");
+                                             int cz=sc.nextInt();
+                                             while (cz==1){
+                                             System.out.println(" 请输入充值金额，一次最多一万");
+                                             int cz2 =sc.nextInt();
+                                             uc.recharge(cz2,username2,psd2);
+                                             uc.show(username2,psd2);
+                                             System.out.println("是否再次进行充值：充值请按：1，返回请按：0");
+                                             cz =sc.nextInt();
+                                                }
+                                       }
+                               //删除商品
+                              }else if(gm == 2){
+                                  System.out.println("请输入你要删除的商品名称");
+                                  String shan =sc.next();
+                                  int s = shop.reduce(username2,shan);
+                                  if(s == 1){
+                                      System.out.println("删除成功");
                                   }else {
-                                      System.out.println("你的余额不足，是否进行充值：充值请按：1，返回请按：0");
-                                      int cz=sc.nextInt();
-                                      while (cz==1){
-                                          System.out.println(" 请输入充值金额，一次最多一万");
-                                          int cz2 =sc.nextInt();
-                                          uc.recharge(cz2,username2,psd2);
-                                          uc.show(username2,psd2);
-                                          System.out.println("是否再次进行充值：充值请按：1，返回请按：0");
-                                           cz =sc.nextInt();
-                                      }
+                                      System.out.println("购物车暂无此商品");
                                   }
-                              }else {
+                              }
+                              else {
                                  break;//用户选择退出
                               }
                               }else{

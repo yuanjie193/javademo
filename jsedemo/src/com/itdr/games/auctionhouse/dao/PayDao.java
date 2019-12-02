@@ -87,8 +87,8 @@ public class PayDao {
     public static void show2(String name){
         for (int i = 0; i < sc2.length; i++) {
             if(sc2[0] == null){
-                    System.out.println("你的百宝囊暂时没有商品！");
-                    break;
+                System.out.println("你的百宝囊暂时没有商品！");
+                break;
             }
             if(sc2[i]!=null){
                 if(sc2[i].getUserName().equals(name)){

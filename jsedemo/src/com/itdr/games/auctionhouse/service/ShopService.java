@@ -12,4 +12,8 @@ public class ShopService {
         }
         return "已加入购物车";
     }
+    //清理购物车产品
+    public int reduce(String uName,String goodsName){
+       return sd.reduce(uName,goodsName);
+    }
 }

@@ -8,4 +8,8 @@ public class ShopController {
         String goods = ss.addGoods(uname,num);
         System.out.println(goods);
     }
+    //清理购物车产品
+    public int  reduce(String uName,String goodsName){
+      return ss.reduce(uName,goodsName);
+    }
 }
