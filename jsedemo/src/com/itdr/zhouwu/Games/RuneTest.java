@@ -115,7 +115,7 @@ public class RuneTest {
                     System.out.println("你可以选择你想要的符文");
                     System.out.println("这是所有符文的基本特性，请查看！");
                     fwen(blue,orange,green);
-                    System.out.println("每种颜色符文你可挑选一个符文，选择颜色可进入进行挑选");
+                    System.out.println("每种颜色符文你可挑选两个符文，选择颜色可进入进行挑选");
                     //判断是否输入过此颜色
                     String selectColor = choose(na);
                     //           展示符文信息
@@ -126,64 +126,15 @@ public class RuneTest {
                     tx(blue,orange,green,na,selectColor,u);
                     num++;
                     if (num == 3) {
-                        System.out.println("==============================");
-                        System.out.println("~~恭喜召唤师，您已全部挑选完成~~");
+                        System.out.println("-----------------------------------------------");
+                        System.out.println("---恭喜召唤师，您已全部挑选完成---");
+                        System.out.println("-----------------------------------------------");
                         break;
                     }
                 }
 
                 }
 
-
-//              查看不同颜色符文的详细信息
-                /*int b=1;
-                while (b==1){
-                    for(int i=0;i<na.length;i++){
-                        System.out.println("请输入你想要挑选的符文颜色");
-                        String color =sc.next();
-                       if(na[i]!=null) {
-                            if (na[i].getColor().equals("蓝色") && na[i].getColor().equals("橘色") && na[i].getColor().equals("绿色")) {
-                                System.out.println("你已经选完所有符文，不得再进行挑选");
-                                break;
-                            } else if (color.equals(na[i].getColor())) {
-                                System.out.println("你已挑选此颜色符文，请挑选其它颜色");
-                                for(int j=0;j<na.length;j++){
-                                    if(na[j]!=null){
-                                        System.out.println(na[j].getColor()+na[j].getEname());
-                                    }
-                                }
-
-                            }*//*else{
-                                //           展示符文信息
-                                color(color,blue,orange,green);
-                                //                进行挑选符文
-                                System.out.println("请输入你想要的符文名字");
-                                tx(blue,orange,green,na,color,u);
-                            }*//*
-                        }
-                        else{
-                            //           展示符文信息
-                            color(color,blue,orange,green);
-                            //                进行挑选符文
-                            System.out.println("请输入你想要的符文名字");
-                            tx(blue,orange,green,na,color,u);
-
-                        }
-                    }
-                   *//* for(int i=0;i<na.length;i++){
-                        if(na[i]==null){
-                            System.out.println("请输入你想要挑选的符文颜色");
-                            String color =sc.next();
-                            //           展示符文信息
-                            color(color,blue,orange,green);
-                            //                进行挑选符文
-                            System.out.println("请输入你想要的符文名字");
-                            tx(blue,orange,green,na,color,u);
-                        }
-                    }*//*
-
-                }
-*/
                 }
                 }
 
@@ -334,22 +285,6 @@ public class RuneTest {
             }
 
         }
-            /*for(int i=0;i<orange.length;i++){
-                if(orange[i]!=null){
-                    if(name.equals(orange[i].getEname())){
-                        for(int j=0;j<na.length;j++){
-                            if(na[j]!=null){
-                                na[j]= orange[i];
-                                b++;
-                                return b;
-                            }
-                        }
-
-                    }return -1;
-
-                }
-
-            }*/
             //挑选绿色
         if(color.equals("绿色")){
             int a=4;
