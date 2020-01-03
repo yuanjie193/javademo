@@ -25,7 +25,7 @@ public class ActionTest {
         //开始登陆
         while(true){
             //广告
-            AdvertisementUtil.advertisement();
+            AuctionUtil.advertisement();
             System.out.println("请根据序号选择你要进行的操作：1.用户注册 2.用户登录 3.退出");
             int menu =sc.nextInt();
             switch (menu){
@@ -50,7 +50,7 @@ public class ActionTest {
                       int xz =1;
                       while (xz !=9){
                           //广告
-                      AdvertisementUtil.advertisement();
+                      AuctionUtil.advertisement();
                       //菜单栏
 //                      "1. 充值金额"+"\t"+"2.全部商品"+"\t"+"3.购物车"+"\t"+"4.上架商品"+"\t"+"5.搜索商品"
 //                         +"\t"+"6.我的百宝囊"+"7.个人中心"+"8.退出登录");
@@ -236,7 +236,11 @@ public class ActionTest {
                               break;
                            //退出登录
                           case 9:
+                              System.out.println("再会！");
                               break;
+                           default:
+                               System.out.println("输入数字有误，请重新选择！");
+                               break;
                             }
 
                       }
@@ -246,6 +250,10 @@ public class ActionTest {
                     }
                     break;
                 case 3:
+                    System.out.println("再会！");
+                    break;
+                default:
+                    System.out.println("输入数字有误，请重新选择！");
                     break;
             }
         }//结束登录

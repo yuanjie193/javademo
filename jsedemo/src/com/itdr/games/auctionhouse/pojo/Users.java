@@ -1,6 +1,6 @@
 package com.itdr.games.auctionhouse.pojo;
 
-import com.itdr.cs2.User;
+/*import com.itdr.cs2.User*/;
 
 import java.util.Arrays;
 

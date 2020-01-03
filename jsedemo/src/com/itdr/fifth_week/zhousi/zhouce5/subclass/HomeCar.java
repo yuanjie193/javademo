@@ -5,7 +5,7 @@ import com.itdr.fifth_week.zhousi.zhouce5.Car;
 public final class  HomeCar extends Car {
     public int num;//载客数
     public HomeCar(String cname,String color,int num){
-        super(cname,color);;
+        super(cname,color);
         this.num=num;
     }
     public  void display(){
